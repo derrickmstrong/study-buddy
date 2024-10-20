@@ -47,7 +47,7 @@ const UploadQA = () => {
 
   return (
     <div className="question-form">
-      <h1>React Flashcards</h1>
+      <h1>Study Buddy (Flashcards app)</h1>
       <div>
         <label>
           Upload your Excel (.xls) file to begin: {""}
