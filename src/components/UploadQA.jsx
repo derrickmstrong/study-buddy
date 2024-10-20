@@ -3,6 +3,7 @@ import * as XLSX from "xlsx";
 import { useDispatch } from "react-redux";
 import { addQuestions, clearQuestions } from "../store/questionsReducer";
 import { v4 as uuidv4 } from "uuid";
+import demoImage from "./assets/demo.png";
 
 const UploadQA = () => {
   const fileInputRef = useRef(null);
@@ -49,8 +50,19 @@ const UploadQA = () => {
     <div className="question-form">
       <h1>Study Buddy (Flashcards app)</h1>
       <div>
+        {" "}
+        <img src={demoImage} alt="demo file" width={200} />
+        <br />
+        <a href="../../demo.xlsx" download>
+          📂 Download demo.xlsx 📂
+        </a>
+      </div>
+      <div>
         <label>
-          Upload your Excel (.xls) file to begin: {""}
+          Upload demo.xlsx or your own Excel (.xls or .xlsx) file using the same
+          format to begin: {""}
+          <br />
+          <br />
           <input
             type="file"
             accept=".xlsx, .xls"
