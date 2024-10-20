@@ -60,7 +60,7 @@ const UploadQA = () => {
       <div>
         <label>
           Upload demo.xlsx or your own Excel (.xls or .xlsx) file using the same
-          format to begin: {""}
+          format as in the demo file to begin: {""}
           <br />
           <br />
           <input
@@ -72,7 +72,7 @@ const UploadQA = () => {
         </label>
       </div>
       <button className="clear-button" onClick={handleClear}>
-        Clear Quiz
+        Clear Cards
       </button>
     </div>
   );
