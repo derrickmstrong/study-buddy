@@ -53,7 +53,7 @@ const UploadQA = () => {
         {" "}
         <img src={demoImage} alt="demo file" width={200} />
         <br />
-        <a href="public/demo.xlsx" download>
+        <a href="/demo.xlsx" download>
           📂 Download demo.xlsx 📂
         </a>
       </div>
