@@ -1,4 +1,3 @@
-import { useRef } from "react";
 import * as XLSX from "xlsx";
 import { useDispatch } from "react-redux";
 import { addQuestions, clearQuestions } from "../store/questionsReducer";
@@ -6,7 +5,6 @@ import { v4 as uuidv4 } from "uuid";
 import demoImage from "./assets/demo.png";
 
 const UploadQA = () => {
-  const fileInputRef = useRef(null);
   const dispatch = useDispatch();
 
   const handleFileChange = (e) => {
@@ -35,9 +33,6 @@ const UploadQA = () => {
         answer: row.Answer,
       }));
       dispatch(addQuestions(newQuestions));
-
-      // Clear the file input
-      fileInputRef.current.value = "";
     };
     reader.readAsArrayBuffer(file);
   };
@@ -67,7 +62,6 @@ const UploadQA = () => {
             type="file"
             accept=".xlsx, .xls"
             onChange={handleFileChange}
-            ref={fileInputRef}
           />
         </label>
       </div>
