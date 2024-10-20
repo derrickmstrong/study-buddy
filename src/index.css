@@ -9,7 +9,7 @@ body {
 
 .flashcards {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 20px;
 }
 
@@ -50,7 +50,10 @@ div.selected {
   cursor: pointer;
   width: 150px;
   margin: 0 auto;
+}
 
-  /* display: flex;
-  justify-content: center; */
+@media (min-width: 768px) {
+  .flashcards {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
